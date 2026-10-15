@@ -7,7 +7,7 @@ gateway. This tap carries its Homebrew cask: the prebuilt macOS binary of the la
 ## Install
 
 ```bash
-brew install coddy-project/coddy/coddy
+brew install coddy-project/coddy-agent/coddy
 ```
 
 Homebrew adds the tap, trusts this one cask and installs it. From then on `brew upgrade` follows
@@ -17,7 +17,7 @@ Homebrew 7 does not load anything else from a third-party tap until it is truste
 cask by its short name in every command, trust the tap once:
 
 ```bash
-brew trust coddy-project/coddy
+brew trust coddy-project/coddy-agent
 brew install --cask coddy
 ```
 
