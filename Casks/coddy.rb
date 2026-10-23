@@ -29,6 +29,13 @@ cask "coddy" do
   zap trash: "~/.coddy"
 
   caveats <<~EOS
+    The zsh completion is linked into #{HOMEBREW_PREFIX}/share/zsh/site-functions.
+    zsh loads it once compinit runs with that directory on fpath, and the zsh
+    macOS ships runs no compinit. If Tab does not complete coddy, add to ~/.zshrc:
+      fpath=(#{HOMEBREW_PREFIX}/share/zsh/site-functions $fpath)
+      autoload -Uz compinit && compinit
+    and open a new terminal.
+
     Coddy does not need tmux, but its console runs well inside it: a session
     there outlives a closed terminal or a dropped SSH connection. To add it:
       brew install tmux
