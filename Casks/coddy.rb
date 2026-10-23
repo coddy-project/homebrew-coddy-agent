@@ -1,9 +1,9 @@
 cask "coddy" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.3.42"
-  sha256 arm:   "14b63aa9a9019203b7d0a61a137be9247acd532e5c7aa192e308a8b99f950eb8",
-         intel: "17692037be3051817f838ab53eeca889f566affb898057bfa8bb87d20fbf2110"
+  version "1.3.43"
+  sha256 arm:   "a676eebf53a936cf862681907dd1c54814fd84c23caca32a728b72feeed2fcf3",
+         intel: "7bde2efc4fc49a029526db5b2fa1e0b1f016064162815517b6750c6b48992169"
 
   url "https://github.com/coddy-project/coddy-agent/releases/download/#{version}/coddy_#{version}_darwin_#{arch}.tar.gz"
   name "Coddy Agent"
