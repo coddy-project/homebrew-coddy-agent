@@ -1,9 +1,9 @@
 cask "coddy" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.4.18"
-  sha256 arm:   "cbfba229f8156ee03de9c9d93e7fdd32e6cb245d8cb4b45efee7a30c676faf8a",
-         intel: "fd2090223e29c0b62deb1b971bec3514f421f2060bf93e1f7b5daa69d984fe0e"
+  version "1.4.19"
+  sha256 arm:   "e5f693556fd29044ff0aa4affc996355e545e8a5872511722cd79c008d4fa971",
+         intel: "79285ca27f68f08e39d9e3c219be1baaf58f74cde234045a94d5f355a62be6d2"
 
   url "https://github.com/coddy-project/coddy-agent/releases/download/#{version}/coddy_#{version}_darwin_#{arch}.tar.gz"
   name "Coddy Agent"
@@ -15,7 +15,7 @@ cask "coddy" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   binary "coddy"
   manpage "coddy.1"
